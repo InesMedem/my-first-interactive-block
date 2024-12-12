@@ -64,13 +64,21 @@ __webpack_require__.r(__webpack_exports__);
 
 const {
   state
-} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block', {
-  state: {
-    get themeText() {
-      return state.isDark ? state.darkText : state.lightText;
-    }
-  },
+} = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)("create-block", {
   actions: {
+    guessAttempt: () => {
+      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
+      console.log(context.index === context.correctAnswer);
+    },
+    //   state: {
+    //     get themeText() {
+    //       return state.isDark ? state.darkText : state.lightText;
+    //     },
+    //   },
+    // buttonHandler: () => {
+    //   const context = getContext();
+    //   context.clickCount++;
+    // },
     toggleOpen() {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.isOpen = !context.isOpen;
